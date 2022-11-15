@@ -51,6 +51,11 @@ export default function Home({ posts }) {
   console.log(posts);
   return (
     <div>
+      <Head>
+        <meta property="og:title" content="__OG_TITLE__" />
+        <meta property="og:description" content="__OG_DESCRIPTION__" />
+        <title>Rean2Rean Blog</title>
+      </Head>
       <div className=" py-10 text-center">
         <div className="">
           <p className="text-xl px-8 md:text-2xl lg:text-3xl">
