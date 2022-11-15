@@ -51,10 +51,10 @@ export default function Home({ posts }) {
   console.log(posts);
   return (
     <div>
-      <div className=" py-8 text-center">
+      <div className=" py-20 text-center">
         <div className="">
           <p className="text-xl">
-            ប្លុកដែលចែករំលែកអ្នកទាំងអស់គ្នា «រៀន​ពីរ​បៀបរៀន»
+            ប្លុកដែលចែករំលែកអ្នកទាំងអស់គ្នាអំពីរៀនពីរបៀបរៀន
           </p>
         </div>
       </div>
