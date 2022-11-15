@@ -10,7 +10,7 @@ const BlogPost = ({
   slug,
 }) => {
   return (
-    <div className="p-4 max-w-[450px]  rounded-xl hover:scale-125 transition duration-700 ">
+    <div className="p-4 max-w-[450px]  rounded-xl hover:bg-gray-100 transition duration-700 ">
       <Link href={"/posts/" + slug}>
         <div className="">
           <img

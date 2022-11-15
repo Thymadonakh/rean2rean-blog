@@ -1,4 +1,5 @@
 import { GraphQLClient, gql } from "graphql-request";
+import { serialize } from "next-mdx-remote/serialize";
 
 const graphcms = new GraphQLClient(
   "https://api-ap-northeast-1.hygraph.com/v2/clagw6emf067601tcgynudmut/master"

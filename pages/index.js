@@ -10,7 +10,7 @@ const graphcms = new GraphQLClient(
 
 const QUERY = gql`
   {
-    posts {
+    posts(orderBy: publishedAt_DESC) {
       title
       id
       slug
@@ -51,9 +51,9 @@ export default function Home({ posts }) {
   console.log(posts);
   return (
     <div>
-      <div className=" py-20 text-center">
+      <div className=" py-10 text-center">
         <div className="">
-          <p className="text-xl md:text-2xl lg:text-3xl">
+          <p className="text-xl px-8 md:text-2xl lg:text-3xl">
             ប្លុកដែលចែករំលែកអ្នកទាំងអស់គ្នាអំពីរៀនពីរបៀបរៀន
           </p>
         </div>
