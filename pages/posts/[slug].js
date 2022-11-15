@@ -1,5 +1,5 @@
 import { GraphQLClient, gql } from "graphql-request";
-import { serialize } from "next-mdx-remote/serialize";
+import ReactMarkdown from "react-markdown";
 
 const graphcms = new GraphQLClient(
   "https://api-ap-northeast-1.hygraph.com/v2/clagw6emf067601tcgynudmut/master"
@@ -18,6 +18,7 @@ const QUERY = gql`
       }
       content {
         html
+        markdown
       }
       author {
         createdBy {
@@ -81,9 +82,11 @@ export default function BlogPost({ post }) {
         <h3>Published Date: {post.datePublished}</h3>
       </div>
       <div
-        className=""
-        dangerouslySetInnerHTML={{ __html: post.content.html }}
-      ></div>
+        className="prose max-w-screen-2xl"
+        // dangerouslySetInnerHTML={{ __html: post.content.html }}
+      >
+        <ReactMarkdown>{post.content.markdown}</ReactMarkdown>
+      </div>
     </div>
   );
 }
